@@ -14,14 +14,11 @@
 			<img src="images/html-logo.svg" height="75" width="75" alt="HTML" />
 			<h1>HTML, CSS, and JS Fundamentals</h1>
 			<h2>Building Blocks for Web Developers</h2>
-			<nav>
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="red.php">Red Blocks</a></li>
-					<li><a href="blue.php">Blue Blocks</a></li>
-					<li><a href="yellow.php">Yellow Blocks</a></li>
-				<ul>
-			</nav>
+<?php
+	// get the global navigation HTML
+	include("includes/nav.php");
+
+?>
 		</header>
 		<!-- Page-level main content -->
 		<main>
