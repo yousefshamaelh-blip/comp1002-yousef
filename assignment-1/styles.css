@@ -1,0 +1,145 @@
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff7f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #b22222;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+main p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+main img {
+    float: right;
+    margin-left: 15px;
+    border-radius: 8px;
+}
+
+
+form {
+    margin-top: 2rem;
+}
+
+fieldset {
+    border: 2px solid #e06c00;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #fff0e0;
+}
+
+legend {
+    font-weight: bold;
+    color: #b22222;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: inline-block;
+    width: 180px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    width: calc(100% - 200px);
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.4rem;
+}
+
+
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #b22222;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #b22222;
+    color: #fff;
+}
+
+
+@media (max-width: 700px) {
+    label {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.3rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select {
+        width: 100%;
+    }
+
+    main img {
+        float: none;
+        display: block;
+        margin: 1rem auto;
+    }
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #e06c00;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
