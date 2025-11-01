@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -21,24 +23,8 @@
     </section>
     <section>
     <h2>Pizza Order Form</h2>
-    <form action="submit-order.php" method="post">
-        <fieldset>
-            <legend>Customer Information</legend>
-        </fieldset>
-
-        <fieldset>
-            <legend>Pizza Details</legend>
-        </fieldset>
-
-        <fieldset>
-            <legend>Order Type</legend>
-        </fieldset>
-
-        <fieldset>
-            <legend>Submit Your Order</legend>
-            <input type="submit" value="Place Order">
-            <input type="reset" value="Clear Form">
-        </fieldset>
+    
+       
     </form>
     <fieldset>
     <legend>Customer Information</legend>
@@ -107,6 +93,11 @@
     <input type="radio" id="eat-in" name="order_type" value="eat-in">
     <label for="eat-in">Eat In</label>
 </fieldset>
+         <fieldset>
+            <legend>Submit Your Order</legend>
+            <input type="submit" value="Place Order">
+            <input type="reset" value="Clear Form">
+        </fieldset>
 </section>
     </main>
 
