@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+html {
+	background-color: lightskyblue;
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+	color: black;
+	font-size: 10px;
+}
+
+body {
+	margin: 0 auto;
+	min-width: 768px;
+	max-width: 1024px;
+}
+
+header {
+	font-size: 1.8rem;
+}
+/* STEP 1: Float the HEADER IMG to the left */
+header img {
+	float: left;
+}
+
+header a {
+	text-decoration: none;
+}
+/* STEP 2: Set the text-align for both the HEADER H1 and the HEADER H2 to right */
+header h1,
+header h2 {
+	text-align: right;
+}
+/* STEP 3a: Reduce the margin-bottom of the HEADER H1 to zero, so that the following H2 sit up a bit closer to the H1 */
+header h1 {
+	margin-bottom: 0;
+}
+/* STEP 3b: The HEADER H2 has a margin-top by default, set that also to zero to bring it up a bit closer to the H1 */
+header h2 {
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+/* STEP 4d: There's a bit of padding-left on the UL element that contains the LI elements - set it to zero */
+header nav ul {
+	padding-left: 0;
+}
+
+/* STEP 4a: Apply a 1px dashed red outline around each of the LI elements inside the HEADER NAV so that we can see that each LI is a box (border-width, border-style, and border-color) */
+header nav li {
+	/* STEP 4e: Commented out after testing */
+	/* border: 1px dashed red; */
+	/* STEP 4b: Set LI to inline-block so they line up horizontally */
+	display: inline-block;
+	/* STEP 4c: Add margin-right of 0.5em */
+	margin-right: 0.5em;
+}
+
+main {
+	font-size: 1.8rem;
+	line-height: 1.5;
+	text-align: justify;
+	background-color: white;
+	/* Arrange the SECTION and the ASIDE elements side-by-side in columns */
+	display: flex;
+	flex-direction: row;
+}
+
+/* STEP 5a: Put a 1px dotted hotpink border around MAIN SECTION in the CSS rule below so we can see the box on the screen */
+main section {
+	/* border: 1px dotted hotpink;  STEP 5d: Later commented out */
+	width: 60%;
+	/* STEP 5b: Add 1em padding on all sides */
+	padding: 1em;
+}
+
+main section time {
+	font-style: italic;
+}
+
+/* STEP 5c: After adding a colored border to the below MAIN ASIDE, go ahead and also add padding to the top, right, and bottom (not the left) */
+main aside {
+	/* border: 1px dotted green;  STEP 5d: Later commented out */
+	width: 40%;
+	padding-top: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+}
+/* STEP 5d: Borders commented out above */
+
+/* STEP 7a: Select IMG inside ASIDE with alt ending in 'block' */
+main aside img[alt$="block"] {
+	/* STEP 7b: Move slightly left */
+	position: relative;
+	left: -3rem;
+}
+
+.new-feature {
+	padding-left: 25px;
+	background-image: url("../images/new.png");
+	background-repeat: no-repeat;	
+	background-position: top left;
+}
+
+#emailAddress {
+	font-weight: bold;
+}
+
+[rel="external"] {
+	padding-right: 20px;
+	background-image: url("../images/extlink.png");
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+/* Thank you to 'pnx' at https://openclipart.org/detail/202731/external-link-icon for the very cool external link icon */
+
+main a {
+	text-decoration: none;
+	color: lightskyblue;
+	font-weight: bold;
+}
+
+main a:hover {
+	text-decoration: underline;
+	color: orange;
+}
+
+blockquote::first-letter {
+	font-size: 2em;
+}
+
+/* STEP 6: The FOOTER is a bit too close to the MAIN - add a margin-top to the FOOTER of 2rem */
+footer {
+	margin-top: 2rem;
+	font-size: 1.6rem;
+}
+
+footer p {
+	text-align: right;
+}
+
+section > p {
+	text-indent: 2em;
+}
+
+h1, h2, footer {
+	color: white;
+}
