@@ -1,0 +1,155 @@
+
+/* poster.css — with subtle animations added */
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titlePulse {
+  0%   { text-shadow: 0 2px 10px rgba(0,0,0,0.6), 0 0 20px rgba(255,200,120,0.05); }
+  50%  { text-shadow: 0 2px 15px rgba(0,0,0,0.7), 0 0 30px rgba(255,200,180,0.12); }
+  100% { text-shadow: 0 2px 10px rgba(0,0,0,0.6), 0 0 20px rgba(255,200,120,0.05); }
+}
+
+@keyframes slowGlow {
+  0% { opacity: 0.85; }
+  50% { opacity: 1; }
+  100% { opacity: 0.85; }
+}
+
+/* Base variables */
+:root{
+  --title-font: 'Playfair Display', serif;
+  --body-font: 'Open Sans', sans-serif;
+  --title-size: 5.25rem;
+  --accent: #f0e9e0;
+  --muted: rgba(255,255,255,0.85);
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family:var(--body-font);
+  color:var(--muted);
+  background:#000;
+}
+
+/* Main poster background w/ subtle parallax animation */
+.poster-main{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  padding:2rem;
+  background:
+    linear-gradient(180deg, rgba(0,12,30,0.25) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.9) 100%),
+    url('poster.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  animation: slowGlow 6s ease-in-out infinite;
+}
+
+/* Actor names fade in */
+.top-credits ul{
+  list-style:none;
+  display:flex;
+  gap:2.5rem;
+  padding:1rem 2rem;
+  margin:0;
+  justify-content:center;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  font-size:0.85rem;
+  color:rgba(255,255,255,0.95);
+  opacity:0;
+  animation: fadeInUp 1.8s ease-out forwards;
+}
+
+/* Hide duplicate raw image element */
+.poster-figure{display:none}
+
+/* Tagline fade in slightly later */
+.tagline{
+  text-align:center;
+  max-width:720px;
+  font-size:1rem;
+  letter-spacing:1px;
+  margin:0 0 0.6rem 0;
+  opacity:0;
+  animation: fadeInUp 2.4s ease-out forwards;
+}
+
+/* Director line */
+.dir-line{
+  text-align:center;
+  font-size:0.92rem;
+  margin:0 0 1.25rem 0;
+  font-weight:600;
+  text-transform:none;
+  opacity:0;
+  animation: fadeInUp 2.9s ease-out forwards;
+}
+
+/* Movie title w/ glowing pulse */
+.movie-title{
+  font-family:var(--title-font);
+  font-weight:700;
+  font-size:var(--title-size);
+  margin:0;
+  text-align:center;
+  letter-spacing:0.5rem;
+  color:var(--accent);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6), 0 0 20px rgba(255,200,120,0.05);
+  opacity:0;
+  animation: fadeInUp 3.4s ease-out forwards, titlePulse 6s ease-in-out infinite;
+}
+
+/* Coming soon section */
+.meta{
+  text-align:center;
+  margin-top:0.8rem;
+  margin-bottom:2rem;
+  opacity:0;
+  animation: fadeInUp 4s ease-out forwards;
+}
+
+.coming{
+  font-weight:600;
+  letter-spacing:0.2rem;
+  margin:0;
+}
+
+.links{
+  margin-top:0.4rem;
+  font-size:0.9rem;
+}
+
+.links a{
+  color:var(--muted);
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  padding-bottom:2px;
+}
+
+.links a:hover{opacity:0.85}
+
+/* Footer credits */
+.poster-footer{
+  width:100%;
+  text-align:center;
+  padding:1rem 0 2rem 0;
+  font-size:0.75rem;
+  color:rgba(255,255,255,0.7);
+  opacity:0;
+  animation: fadeInUp 4.5s ease-out forwards;
+}
+
+@media (max-width:720px){
+  :root{--title-size:3rem}
+  .top-credits ul{flex-wrap:wrap; gap:1rem; font-size:0.75rem}
+  .tagline{padding:0 1rem}
+}

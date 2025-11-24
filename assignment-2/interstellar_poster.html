@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interstellar — Poster (HTML/CSS Assignment)</title>
+  <!-- Google Fonts (will load when hosted) -->
+  <link href="poster_animated.css" rel="stylesheet">
+  <link rel="stylesheet" href="interstellar_poster.jpeg">
+
+  <div class="poster-container"></div>
+  <img src="interstellar_poster.jpeg" 
+     alt="Interstellar Poster" 
+     class="poster-image">
+</div>
+  <!--
+    Comments:
+    - This page recreates the Interstellar poster layout using semantic HTML.
+    - Files:
+      - poster.css : styles for layout, typography, and effects
+      - poster-image: uses the provided local file path as a background
+  -->
+</head>
+<body>
+  <header class="poster-header" role="banner" aria-label="Interstellar poster header">
+    <nav class="top-credits" aria-label="Top cast">
+      <ul>
+        <li><span class="actor">Matthew</span> <strong>McConaughey</strong></li>
+        <li><span class="actor">Anne</span> <strong>Hathaway</strong></li>
+        <li><span class="actor">Jessica</span> <strong>Chastain</strong></li>
+        <li><span class="actor">Michael</span> <strong>Caine</strong></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="poster-main" role="main">
+    <figure class="poster-figure">
+      <img src="/mnt/data/97ae9fcc-7840-4df9-984d-b0ebd9b2da23_1.029bc71d935c8d5837dae262d72e8b8b.jpeg" alt="Interstellar movie poster" class="poster-image">
+      <figcaption class="visually-hidden">Interstellar poster (photo by Warner Bros)</figcaption>
+    </figure>
+
+    <section class="poster-content" aria-label="Poster textual content">
+      <!-- Tagline -->
+      <p class="tagline">Mankind was born on Earth. It was never meant to die here.</p>
+
+      <!-- Director line -->
+      <p class="dir-line">From the director of <strong>The Dark Knight Trilogy</strong> and <strong>Inception</strong></p>
+
+      <!-- Title -->
+      <h1 class="movie-title">INTERSTELLAR</h1>
+
+      <!-- Coming soon / links -->
+      <div class="meta">
+        <p class="coming">COMING SOON</p>
+        <p class="links">
+          <a href="https://www.imdb.com/title/tt0816692/" target="_blank" rel="noopener">IMDb — Interstellar</a> |
+          <a href="https://www.rottentomatoes.com/m/interstellar_2014" target="_blank" rel="noopener">Rotten Tomatoes</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Credits block using <footer> semantics for poster-like credits -->
+    <footer class="poster-footer" role="contentinfo">
+      <article class="credits" aria-label="Credits">
+        <p class="small-credits"><small>Produced by Legendary Pictures and Syncopy. © 2014 Warner Bros. Pictures.</small></p>
+      </article>
+    </footer>
+  </main>
+
+  
+</body>
+</html>
