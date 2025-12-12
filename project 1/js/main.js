@@ -115,3 +115,23 @@ document.addEventListener('DOMContentLoaded', () => {
       showMessage('Thanks! Your feedback is saved locally in your browser.');
     });
   }
+  if(clearBtn){
+    clearBtn.addEventListener('click', () => {
+      if(confirm('Clear all saved feedback in this browser?')) {
+        localStorage.removeItem(STORAGE_KEY);
+        renderComments();
+      }
+    });
+  }
+
+  function showMessage(msg, isError=false){
+    const el = document.getElementById('formMessage');
+    if(!el) return;
+    el.textContent = msg;
+    el.className = 'form-message' + (isError ? ' error' : ' success');
+    setTimeout(()=> el.textContent = '', 4000);
+  }
+
+  
+  renderComments();
+});  
