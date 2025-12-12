@@ -61,3 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
       starsContainer.appendChild(btn);
     }
   }
+
+  let currentRating = 0;
+  function setRating(n) {
+    currentRating = n;
+    highlight(n);
+  }
+  function highlight(n) {
+    const buttons = starsContainer.querySelectorAll('.star');
+    buttons.forEach(btn => {
+      const v = Number(btn.getAttribute('data-value'));
+      btn.innerText = v <= n ? '★' : '☆';
+      btn.classList.toggle('on', v <= n);
+    });
+  }
