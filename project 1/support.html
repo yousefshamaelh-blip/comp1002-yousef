@@ -10,5 +10,28 @@
   <!-- header same as others -->
   <header class="site-header"><div class="container header-inner"><a class="logo" href="retro.html"><img src="images/logo.jpg" alt="Polaroid Retro Logo"></a>
   <nav class="site-nav"><a href="retro.html">Home</a><a href="about.html">About</a><a href="feedback.html">Feedback</a><a href="support.html">Support</a><a href="corporate.html">Corporate</a></nav></div></header>
+
+  <main class="container">
+    <h1>Support & FAQ</h1>
+    <h2>FAQ</h2>
+    <dl>
+      <dt>How long do batteries last?</dt>
+      <dd>On average 200–300 shots (AA alkaline). Replace both batteries at the same time.</dd>
+      <dt>How do I replace film?</dt>
+      <dd>Open the film compartment, slide in a fresh pack, close, and the camera will reset.</dd>
+      <dt>Warranty</dt>
+      <dd>One year limited warranty. See corporate page for details.</dd>
+    </dl>
+
+    <h2>Contact Support</h2>
+    <form id="supportForm" class="support-form" novalidate>
+      <label for="sname">Name</label><input id="sname" name="name" required>
+      <label for="semail">Email</label><input id="semail" name="email" type="email" required>
+      <label for="smessage">Message</label><textarea id="smessage" rows="4" required></textarea>
+      <div class="form-actions"><button class="btn primary" type="submit">Send</button></div>
+      <div id="supportMsg" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+  
 </body>
 </html>
