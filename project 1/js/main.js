@@ -75,3 +75,43 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.toggle('on', v <= n);
     });
   }
+
+  
+  if(form){
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      
+      if(form.website && form.website.value.trim() !== '') {
+        showMessage('Spam detected.', true);
+        return;
+      }
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const comment = form.comment.value.trim();
+      const rating = currentRating || (form.rating ? form.rating.value : 0);
+
+      if(!comment){
+        showMessage('Please write a comment before submitting.', true);
+        return;
+      }
+      if(!rating || rating < 1){
+        showMessage('Please select a rating (1–5 stars).', true);
+        return;
+      }
+
+      const newComment = {
+        name: name || 'Anonymous',
+        email: email || '',
+        rating,
+        comment,
+        createdAt: new Date().toISOString()
+      };
+      const arr = loadComments();
+      arr.unshift(newComment); // newest first
+      saveComments(arr.slice(0, 100)); // keep last 100
+      renderComments();
+      form.reset();
+      setRating(0);
+      showMessage('Thanks! Your feedback is saved locally in your browser.');
+    });
+  }
