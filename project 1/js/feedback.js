@@ -10,3 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
  
+  const y = new Date().getFullYear();
+  document.getElementById('year')?.textContent = y;
+  document.getElementById('year2')?.textContent = y;
+
+  
+  const learn = document.getElementById('learnBtn');
+  if(learn) {
+    learn.addEventListener('click', () => {
+      
+      window.location.href = 'about.html';
+    });
+  }
+});
