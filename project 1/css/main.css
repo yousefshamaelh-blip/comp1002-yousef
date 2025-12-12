@@ -45,3 +45,7 @@ body{
   .hero-right{order:-1}
   .badge{margin-top:12px}
 }
+
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:999px;border:2px solid transparent;background:transparent;cursor:pointer;text-decoration:none}
+.btn.primary{background:var(--brown);color:white;border-color:var(--brown)}
+.btn.primary:hover{transform:translateY(-2px)}
