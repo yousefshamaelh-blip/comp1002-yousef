@@ -66,3 +66,10 @@ body{
 .stars label:hover, .stars label:hover ~ label {opacity:1; transform:translateY(-2px)}
 .stars .on{opacity:1;color:var(--accent)}
 
+
+.rating input + label{padding:.25rem}
+
+.comments ul{list-style:none;padding:0;margin:0}
+.comments li{padding:.6rem;border-radius:6px;background:rgba(0,0,0,.02);margin-bottom:.5rem}
+
+.site-footer{padding:1.25rem 0;color:var(--muted);font-size:.9rem;border-top:1px solid rgba(0,0,0,.04);margin-top:2rem}
