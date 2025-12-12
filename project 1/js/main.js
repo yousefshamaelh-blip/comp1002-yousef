@@ -33,3 +33,31 @@ document.addEventListener('DOMContentLoaded', () => {
       commentsEl.appendChild(li);
     });
   }
+
+  
+  function renderStars(n) {
+    n = Number(n) || 0;
+    return '★'.repeat(n) + '☆'.repeat(5-n);
+  }
+
+  
+  function escapeHtml(s='') {
+    return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+  }
+
+  
+  if(starsContainer) {
+    starsContainer.innerHTML = ''; 
+    for(let i=1;i<=5;i++){
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'star';
+      btn.setAttribute('data-value', i);
+      btn.setAttribute('aria-label', `${i} star${i>1?'s':''}`);
+      btn.innerText = '☆';
+      btn.addEventListener('click', () => setRating(i));
+      btn.addEventListener('mouseover', () => highlight(i));
+      btn.addEventListener('mouseout', () => highlight(currentRating));
+      starsContainer.appendChild(btn);
+    }
+  }
