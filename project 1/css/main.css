@@ -33,3 +33,9 @@ body{
   .site-nav.show{display:block}
   .site-nav a{display:block;margin:0.25rem 0}
 }
+
+.hero{display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:center;padding:2rem 0}
+.hero img{width:100%;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.hero-left h1{font-size:2rem;margin:0 0 .5rem}
+.lead{font-weight:600;color:var(--muted)}
+.badge{position:relative;margin-top:-48px;background:var(--accent);color:white;padding:.5rem .75rem;border-radius:999px;display:inline-block}
