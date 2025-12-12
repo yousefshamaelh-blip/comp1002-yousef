@@ -39,3 +39,9 @@ body{
 .hero-left h1{font-size:2rem;margin:0 0 .5rem}
 .lead{font-weight:600;color:var(--muted)}
 .badge{position:relative;margin-top:-48px;background:var(--accent);color:white;padding:.5rem .75rem;border-radius:999px;display:inline-block}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr; text-align:center}
+  .hero-right{order:-1}
+  .badge{margin-top:12px}
+}
