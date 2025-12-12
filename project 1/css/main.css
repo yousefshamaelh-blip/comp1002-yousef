@@ -53,3 +53,16 @@ body{
 .specs{border-collapse:collapse;margin:1rem 0}
 .specs th{text-align:left;padding:.4rem .6rem;background:#fff9f5}
 .specs td{padding:.4rem .6rem;border-top:1px solid #eee}
+
+.stars {display:flex;gap:.25rem;align-items:center}
+.stars input{display:none}
+.stars label{
+  font-size:1.6rem;
+  cursor:pointer;
+  user-select:none;
+  opacity:.35;
+  transition:opacity .15s, transform .12s;
+  }
+.stars label:hover, .stars label:hover ~ label {opacity:1; transform:translateY(-2px)}
+.stars .on{opacity:1;color:var(--accent)}
+
