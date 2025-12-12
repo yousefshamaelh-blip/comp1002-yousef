@@ -20,5 +20,48 @@
       </nav>
     </div>
   </header>
+  <main class="container">
+    <section class="feedback">
+      <h1>Rate the OneShot 100</h1>
+
+      <form id="feedbackForm" class="feedback-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required>
+
+        <label for="email">Email (optional)</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com">
+
+        <fieldset class="rating" aria-label="Star rating">
+          <legend>Your rating</legend>
+          <div id="stars" class="stars" role="radiogroup" aria-labelledby="ratingLegend">
+            
+            <input type="radio" name="rating" id="r1" value="1"><label for="r1">1</label>
+            <input type="radio" name="rating" id="r2" value="2"><label for="r2">2</label>
+            <input type="radio" name="rating" id="r3" value="3"><label for="r3">3</label>
+            <input type="radio" name="rating" id="r4" value="4"><label for="r4">4</label>
+            <input type="radio" name="rating" id="r5" value="5"><label for="r5">5</label>
+          </div>
+        </fieldset>
+
+        <label for="comment">Comment</label>
+        <textarea id="comment" name="comment" rows="4" placeholder="Share your thoughts..." required></textarea>
+
+        >
+        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Submit Feedback</button>
+          <button type="button" id="clearComments" class="btn">Clear Saved</button>
+        </div>
+
+        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+      </form>
+
+      <section id="commentsList" class="comments">
+        <h2>Recent feedback</h2>
+        <ul id="comments" aria-live="polite"></ul>
+      </section>
+    </section>
+  </main>
 </body>
 </html>
