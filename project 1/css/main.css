@@ -25,3 +25,11 @@ body{
 .logo img{height:44px}
 .site-nav a{margin-left:1rem;text-decoration:none;color:var(--brown);position:relative}
 .site-nav a:focus,.site-nav a:hover{color:var(--accent);outline-offset:4px}
+
+.nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
+@media (max-width:720px){
+  .nav-toggle{display:inline-block}
+  .site-nav{display:none;position:absolute;top:64px;right:1rem;background:var(--cream);padding:0.75rem;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+  .site-nav.show{display:block}
+  .site-nav a{display:block;margin:0.25rem 0}
+}
